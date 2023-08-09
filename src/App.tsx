@@ -1,12 +1,12 @@
 import React from 'react';
 
-import {CurvedLine} from './components/CurvedLine';
+import {WaveAnimation} from './components/WaveAnimation';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <CurvedLine />
+      <WaveAnimation />
     </div>
   );
 }
