@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 export const WaveAnimation: React.FC = () => {
   const width = window.innerWidth;
   const height = 200;
-  const waveAmplitiude = 20;
+  const waveAmplitiude = 1;
   const waveLength = 100;
   const waveSpeed = 0.5;
 
@@ -20,17 +20,17 @@ export const WaveAnimation: React.FC = () => {
     requestAnimationFrame(animateWave);
   }
 
-  const points = [];
-  for(let x = 0; x < width; x += 10) {
+  const point = Array.from({ length: width }, (_, x) => {
+    x *= 10;
     const y = waveAmplitiude * Math.sin((x + waveOffset) / waveLength);
-    points.push(`${x},${height/2  + y}`);
-  }
-  const path = `M${points.join(' ')}`;
+    return `${x},${height / 2 + y}`
+  });
+  const path = `M${point.join(' ')}`;
 
   return (
     <>
       <svg width={width} height={height}>
-      <path d={path} fill="transparent" stroke="blue" strokeWidth={5} />
+      <path d={path} fill="#0d6153" stroke="#0d6153" strokeWidth={1} />
       </svg>
   
     </>
