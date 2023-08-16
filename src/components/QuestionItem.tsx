@@ -11,15 +11,16 @@ interface Option {
 
 export interface QuestionItemProps {
    question: string;
+   number?: number;
    options: Option[];
 }
 
-export const QuestionItem: React.FC<QuestionItemProps> = ({ question, options }) => {
+export const QuestionItem: React.FC<QuestionItemProps> = ({ number, question, options }) => {
    const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
    return (
       <QuestionContainer>
-         <QuestionText>{question}</QuestionText>
+         <QuestionText>{number}. {question}</QuestionText>
          {options.map((option, index) => (
             <OptionItem
                key={index}

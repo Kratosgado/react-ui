@@ -18,7 +18,7 @@ export const OptionItem: React.FC<OptionItemProps> = ({ text, isChecked, isCorre
   };
 
   return (
-    <CheckboxContainer>
+    <CheckboxContainer isChecked={isChecked} isCorrect={isCorrect}>
       <HiddenCheckbox checked={isChecked} onChange={handleCheckboxChange} />
       <StyledCheckbox isChecked={isChecked} isCorrect />
       <CheckboxLabel>{text}</CheckboxLabel>
@@ -29,11 +29,12 @@ export const OptionItem: React.FC<OptionItemProps> = ({ text, isChecked, isCorre
 const primaryColor = '#007bff';
 const secondarColor = '#0d6153'
 
-const CheckboxContainer = styled.div`
+const CheckboxContainer = styled.div<StyledCheckboxProps>`
   display: flex;
   align-items: center;
   max-width: fit-content;
-  background-color: #fff;
+  background-color: ${({ isChecked, isCorrect }) => 
+    isChecked ?( isCorrect ? 'green' : 'red') : '#fff'};
   margin: 5px 0;
   padding: 5px;
   border: 1px solid ${primaryColor};

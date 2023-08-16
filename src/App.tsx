@@ -15,8 +15,8 @@ export default function App() {
     <div className="App">
       <Header />
       <h1>General Questions</h1>
-      {questions.map((q, index) => (
-        <QuestionItem key={index} question={q.question} options={q.options} />
+      {questions.map(( question, index) => (
+        <QuestionItem key={index} number={index + 1} {...question} />
       ))}
     </div>
   );
