@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 export const WaveAnimation: React.FC = () => {
   const width = window.innerWidth;
   const height = 200;
-  const waveAmplitiude = 1;
+  const waveAmplitiude = 5;
   const waveLength = 100;
   const waveSpeed = 0.5;
 

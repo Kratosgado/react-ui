@@ -2,6 +2,9 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px;
 }
 
 .App-logo {

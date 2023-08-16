@@ -1,20 +1,53 @@
 import React from 'react';
 
-import {WaveAnimation} from './components/WaveAnimation';
 import './App.css';
 import { Header } from './components/Header';
-import { OptionItem } from './components/OptionItem';
-import { Circle } from './components/Circle';
+import { QuestionItem, QuestionItemProps } from './components/QuestionItem';
 
-function App() {
+
+
+
+export default function App() {
+  const [isChecked, setIsChecked] = React.useState(false);
+
+
   return (
     <div className="App">
       <Header />
-      {/* <Circle /> */}
-      <WaveAnimation />
-      <OptionItem />
+      <h1>General Questions</h1>
+      {questions.map((q, index) => (
+        <QuestionItem key={index} question={q.question} options={q.options} />
+      ))}
     </div>
   );
 }
 
-export default App;
+const questions: QuestionItemProps[] = [
+  {
+    question: 'What is the capital of France?',
+    options: [
+      { text: "London" },
+      { text: "Paris", isCorrect: true },
+      { text: "Dublin" },
+      { text: "Madrid" }
+    ]
+  },
+  {
+    question: 'Who is CEO of Tesla?',
+    options: [
+      { text: "Jeff Bezos" },
+      { text: "Elon Musk", isCorrect: true },
+      { text: "Bill Gates" },
+      { text: "Tony Stark" }
+    ]
+  },
+  {
+    question: 'The iPhone was created by which company?',
+    options: [
+      { text: "Apple", isCorrect: true },
+      { text: "Intel" },
+      { text: "Amazon" },
+      { text: "Microsoft" }
+    ]
+  }
+]
