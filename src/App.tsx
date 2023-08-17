@@ -16,6 +16,7 @@ export default function App() {
       <Header />
       <h1>General Questions</h1>
       {questions.map(( question, index) => (
+        
         <QuestionItem key={index} number={index + 1} {...question} />
       ))}
     </div>

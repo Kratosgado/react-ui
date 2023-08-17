@@ -30,6 +30,11 @@ export const QuestionItem: React.FC<QuestionItemProps> = ({ number, question, op
                onChange={() => setSelectedOption(option.text)}
             />
          ))}
+         <div>
+            {selectedOption && (
+               <span>You have selected</span>
+         )}
+         </div>
       </QuestionContainer>
    );
 }

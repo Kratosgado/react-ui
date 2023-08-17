@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export const WaveAnimation: React.FC = () => {
   const width = window.innerWidth;
-  const height = 200;
+  const height = 10;
   const waveAmplitiude = 5;
   const waveLength = 100;
   const waveSpeed = 0.5;
@@ -29,7 +29,7 @@ export const WaveAnimation: React.FC = () => {
 
   return (
     <>
-      <svg width={width} height={height}>
+      <svg width={width} height={10}>
       <path d={path} fill="#0d6153" stroke="#0d6153" strokeWidth={1} />
       </svg>
   

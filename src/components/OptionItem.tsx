@@ -27,7 +27,7 @@ export const OptionItem: React.FC<OptionItemProps> = ({ text, isChecked, isCorre
 };
 
 const primaryColor = '#007bff';
-const secondarColor = '#0d6153'
+const secondarColor = '#0d6153';
 
 const CheckboxContainer = styled.div<StyledCheckboxProps>`
   display: flex;
