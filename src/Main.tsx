@@ -2,9 +2,14 @@ import { styled } from "styled-components"
 import { RightSideBar } from "./components/RightSideBar"
 import { QuestionItem, QuestionItemProps } from "./components/QuestionItem"
 import { LeftSideBar } from "./components/LeftSideBar"
+import { useState } from "react"
 
 
 export const Main = () => {
+  // const [selectedCourse, setSelectedCourse] = useState("No course selected");
+
+
+
    return (
       <MainContainer>
          <LeftSideBar />
