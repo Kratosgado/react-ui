@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import { primaryColor, secondaryColor } from './constants';
 
 export const Header = () => {
 
@@ -10,6 +11,7 @@ export const Header = () => {
   return (
     <HeaderContainer>
       <h2>KgOpinion.com</h2>
+      <h2>Kg Tests</h2>
       <AccountContainer onClick={onLoginPressed}>
         Login
       </AccountContainer>
@@ -17,8 +19,6 @@ export const Header = () => {
   )
 }
 
-const primaryColor = '#007bff';
-const secondarColor = '#32bda6';
 
 
 // styles for header
@@ -31,7 +31,7 @@ const HeaderContainer = styled.header`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border: 2px solid ${secondarColor};
+  border: 2px solid ${secondaryColor};
   border-radius: 10px;
 `
 
@@ -44,8 +44,8 @@ const AccountContainer = styled.button`
   margin-right: 10px;
   padding: 5px;
   background-color: #fff;
-  color: ${secondarColor};
-  border-color: ${secondarColor};
+  color: ${secondaryColor};
+  border-color: ${secondaryColor};
 
 
 `
