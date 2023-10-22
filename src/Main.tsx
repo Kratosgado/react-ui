@@ -56,7 +56,61 @@ const questions: QuestionItemProps[] = [
        { text: "Amazon" },
        { text: "Microsoft" }
      ]
-   }
+  },
+  {
+    question: 'What is the capital of France?',
+    options: [
+      { text: "London" },
+      { text: "Paris", isCorrect: true },
+      { text: "Dublin" },
+      { text: "Madrid" }
+    ]
+  },
+  {
+    question: 'Who is CEO of Tesla?',
+    options: [
+      { text: "Jeff Bezos" },
+      { text: "Elon Musk", isCorrect: true },
+      { text: "Bill Gates" },
+      { text: "Tony Stark" }
+    ]
+  },
+  {
+    question: 'The iPhone was created by which company?',
+    options: [
+      { text: "Apple", isCorrect: true },
+      { text: "Intel" },
+      { text: "Amazon" },
+      { text: "Microsoft" }
+    ]
+  },
+  {
+    question: 'What is the capital of France?',
+    options: [
+      { text: "London" },
+      { text: "Paris", isCorrect: true },
+      { text: "Dublin" },
+      { text: "Madrid" }
+    ]
+  },
+  {
+    question: 'Who is CEO of Tesla?',
+    options: [
+      { text: "Jeff Bezos" },
+      { text: "Elon Musk", isCorrect: true },
+      { text: "Bill Gates" },
+      { text: "Tony Stark" }
+    ]
+  },
+  {
+    question: 'The iPhone was created by which company?',
+    options: [
+      { text: "Apple", isCorrect: true },
+      { text: "Intel" },
+      { text: "Amazon" },
+      { text: "Microsoft" }
+    ]
+ },
  ]
 
 const MainContainer = styled.main`
